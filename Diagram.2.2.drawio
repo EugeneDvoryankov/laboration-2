@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T14:17:50.848Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="YxlPZgjJ_RmGwEEssYaU" version="13.10.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T14:18:49.094Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="FlNFsVhRFkmdHMqiCy98" version="13.10.6" type="github">
   <diagram id="1R9pqmuIDQbFG5ekNz2X" name="Page-1">
     <mxGraphModel dx="1422" dy="2448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -548,15 +548,6 @@
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-56" value="Timer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=33;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="4000" y="1200" width="160" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="Z_tI0dn7aJH7XG_BfM5y-58" value="CarView" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=33;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="4040" y="724" width="160" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="Z_tI0dn7aJH7XG_BfM5y-59" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="Z_tI0dn7aJH7XG_BfM5y-58" edge="1">
-          <mxGeometry x="-1" y="3" relative="1" as="geometry">
-            <mxPoint x="3880" y="741" as="sourcePoint" />
-            <mxPoint x="4020" y="741" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-65" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Z_tI0dn7aJH7XG_BfM5y-61" target="Z_tI0dn7aJH7XG_BfM5y-66" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
