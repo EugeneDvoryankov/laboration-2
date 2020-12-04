@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-04T12:18:23.577Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="KV0z8_84aafwWudGX2BT" version="13.10.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-04T12:25:02.723Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="nmtFSp7kDRpUtzC2GBOt" version="13.10.8" type="github">
   <diagram id="1R9pqmuIDQbFG5ekNz2X" name="Page-1">
-    <mxGraphModel dx="2844" dy="3242" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="2448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -406,67 +406,67 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-2" value="VehicleView" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="2900" y="881" width="200" height="546" as="geometry" />
+          <mxGeometry x="2880" y="881" width="220" height="546" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-3" value="&lt;&lt;final&gt;&gt; - X : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="26" width="200" height="26" as="geometry" />
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-13" value="&lt;&lt;final&gt;&gt; - Y : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="52" width="200" height="26" as="geometry" />
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="j8rSewC6rKLH1VLoQwuF-1" value="*cc:CarController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="78" width="200" height="26" as="geometry" />
+        <mxCell id="j8rSewC6rKLH1VLoQwuF-1" value="* vc:VehicleController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-16" value="* drawPanel : DrawPanel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="104" width="200" height="26" as="geometry" />
+          <mxGeometry y="104" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-21" value="* controlPanel : JPanel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="130" width="200" height="26" as="geometry" />
+          <mxGeometry y="130" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-25" value="* gasPanel : JPanel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="156" width="200" height="26" as="geometry" />
+          <mxGeometry y="156" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-26" value="* gasSpinner : JSpinner " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="182" width="200" height="26" as="geometry" />
+          <mxGeometry y="182" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-29" value="* gasAmount : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="208" width="200" height="26" as="geometry" />
+          <mxGeometry y="208" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-31" value="* gasLabel : JLabel " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="234" width="200" height="26" as="geometry" />
+          <mxGeometry y="234" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-34" value="* gasButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="260" width="200" height="26" as="geometry" />
+          <mxGeometry y="260" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-37" value="* brakeButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="286" width="200" height="26" as="geometry" />
+          <mxGeometry y="286" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-38" value="* turboOnButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="312" width="200" height="26" as="geometry" />
+          <mxGeometry y="312" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-39" value="* turboOffButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="338" width="200" height="26" as="geometry" />
+          <mxGeometry y="338" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-40" value="* liftBedButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="364" width="200" height="26" as="geometry" />
+          <mxGeometry y="364" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-41" value="* lowerBedButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="390" width="200" height="26" as="geometry" />
+          <mxGeometry y="390" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-42" value="* startButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="416" width="200" height="26" as="geometry" />
+          <mxGeometry y="416" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-43" value="* stopButton : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="442" width="200" height="26" as="geometry" />
+          <mxGeometry y="442" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="468" width="200" height="8" as="geometry" />
+          <mxGeometry y="468" width="220" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="Z_tI0dn7aJH7XG_BfM5y-5" value="+CarView(frameName: String,&#xa; drawPanel : DrawPanel)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="476" width="200" height="44" as="geometry" />
+        <mxCell id="Z_tI0dn7aJH7XG_BfM5y-5" value="+CarView(frameName: String,&#xa; model : Model, vc: VehicleControllerl)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
+          <mxGeometry y="476" width="220" height="44" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-45" value="- initComponents(title : String) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Z_tI0dn7aJH7XG_BfM5y-2" vertex="1">
-          <mxGeometry y="520" width="200" height="26" as="geometry" />
+          <mxGeometry y="520" width="220" height="26" as="geometry" />
         </mxCell>
         <mxCell id="Z_tI0dn7aJH7XG_BfM5y-6" value="JFrame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=33;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="2920" y="660.74" width="160" height="34" as="geometry" />
