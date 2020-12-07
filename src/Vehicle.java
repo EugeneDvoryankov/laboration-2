@@ -54,6 +54,8 @@ public abstract class Vehicle implements Movable {
         this.image = image;
     }
 
+
+
     /**
      * Get the X coordinate (For testing purposes)
      *
