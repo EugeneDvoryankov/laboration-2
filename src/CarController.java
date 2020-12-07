@@ -98,6 +98,7 @@ public class CarController {
 
 
                 // repaint() calls the paintComponent method of the panel
+                //world.update();
                 frame.drawPanel.repaint();
             }
 

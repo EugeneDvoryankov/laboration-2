@@ -12,7 +12,7 @@ import javax.swing.*;
 // This panel represent the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel {
-    CarView frame;
+
     List<Vehicle> vehicles;
 
     // Just a single image, TODO: Generalize
@@ -29,6 +29,7 @@ public class DrawPanel extends JPanel {
 
 
     // Initializes the panel and reads the images
+    //DrawPanel List<Vehicle<
     public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
