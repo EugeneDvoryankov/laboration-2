@@ -1,4 +1,4 @@
-public class Turbo {
+public class Turbo implements HasTurbo{
     private boolean turboOn;
     /**
      * Sets turboOn true.

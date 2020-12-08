@@ -7,7 +7,7 @@ import java.awt.*;
  * The class also have following methods:
  * setTurboOn(), setTurboOff(), isTurboOn() and speedFactor()
  */
-public class Saab95 extends Car {
+public class Saab95 extends Car implements HasTurbo {
 private Turbo turbo = new Turbo();
 
     public Saab95(double x, double y,int nrDoors, double enginePower, double currentSpeed,

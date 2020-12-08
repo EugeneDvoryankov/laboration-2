@@ -11,7 +11,7 @@ import java.awt.*;
  * for the purpose of increasing and decreasing platform angle
  * and to check if platform is raised (angle is greater than zero)
  */
-public class Scania extends Truck{
+public class Scania extends Truck implements HasPlatform{
 
     private final Ramp ramp = new Ramp();
     private int platformAngle; // the angle the platform is at, the platform is considered a ramp
