@@ -1,3 +1,5 @@
+package notInUse;
+
 import Vehicle.*;
 
 import javax.swing.*;

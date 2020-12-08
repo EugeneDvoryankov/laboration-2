@@ -1,3 +1,5 @@
+package notInUse;
+
 import Vehicle.Vehicle;
 
 import java.awt.*;
@@ -27,7 +29,7 @@ public class DrawPanel extends JPanel {
 
 
     // Initializes the panel and reads the images
-    //DrawPanel List<Vehicle.Vehicle<
+    //notInUse.DrawPanel List<Vehicle.Vehicle<
     public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));

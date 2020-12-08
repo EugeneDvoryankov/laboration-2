@@ -73,7 +73,7 @@ public class World implements IWorld{
      * @param vehicle
      * @return true if the x coordinate of a vehicle is less than zero, otherwise false
      */
-    private boolean isOutOfBoundsLeft(Vehicle vehicle) {
+    public boolean isOutOfBoundsLeft(Vehicle vehicle) {
         return vehicle.getX() < 0;
     }
 
@@ -82,7 +82,7 @@ public class World implements IWorld{
      * @param vehicle
      * @return true if the x coordinate of a vehicle is greater than 684 pixels, otherwise false
      */
-    private boolean isOutOfBoundsRight(Vehicle vehicle) {
+    public boolean isOutOfBoundsRight(Vehicle vehicle) {
         return vehicle.getX() > 684;
     }
 
@@ -91,7 +91,7 @@ public class World implements IWorld{
      * @param vehicle
      * @return true if the y coordinate of a vehicle is less than zero, otherwise false
      */
-    private boolean isOutOfBoundsUp(Vehicle vehicle) {
+    public boolean isOutOfBoundsUp(Vehicle vehicle) {
         return vehicle.getY() < 0;
     }
 
@@ -100,7 +100,7 @@ public class World implements IWorld{
      * @param vehicle
      * @return true if the y coordinate of a vehicle is greater than 500 pixels, otherwise false
      */
-    private boolean isOutOfBoundsDown(Vehicle vehicle) {
+    public boolean isOutOfBoundsDown(Vehicle vehicle) {
         return vehicle.getY() > 500;
     }
 
@@ -122,7 +122,7 @@ public class World implements IWorld{
      * Takes a number between 0 and 100
      * @param amount how hard you press the brake
      */
-    void brake(int amount) {
+    public void brake(int amount) {
         double gas = ((double) amount) / 100;
         for (Vehicle vehicle : vehicles
         ) {
