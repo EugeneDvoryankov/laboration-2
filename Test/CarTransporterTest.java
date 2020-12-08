@@ -1,4 +1,4 @@
-import Vehicle.Volvo240;
+import Vehicle.*;
 import org.junit.Test;
 
 

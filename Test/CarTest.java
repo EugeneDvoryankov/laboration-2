@@ -1,6 +1,5 @@
-import Vehicle.Volvo240;
+import Vehicle.*;
 import org.junit.Test;
-
 import java.awt.*;
 import static java.lang.System.out;
 

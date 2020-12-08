@@ -2,15 +2,15 @@ package Model;
 import Vehicle.*;
 import java.util.ArrayList;
 
-public class HasPlatform implements VehicleAttribute{
-    ArrayList<HasPlatform> hasPlatforms;
+public class HasPlatformModel implements VehicleAttribute{
+    ArrayList<HasPlatform> hasPlatformList;
 
     /** Raises the platformAngle by 60° for all vehicles
      *
      */
     public void raisePlatformAngle() {
-        for (Vehicle vehicle : vehicles) {
-            vehicle.raisePlatformAngle(60);
+        for (HasPlatform hasPlatform: hasPlatformList) {
+            hasPlatform.raisePlatformAngle(60);
         }
     }
 
@@ -18,8 +18,8 @@ public class HasPlatform implements VehicleAttribute{
      *
      */
     public void lowerPlatformAngle() {
-        for (Vehicle vehicle : vehicles) {
-            vehicle.lowerPlatformAngle(60);
+        for (HasPlatform hasPlatform: hasPlatformList) {
+            hasPlatform.lowerPlatformAngle(60);
         }
     }
 }

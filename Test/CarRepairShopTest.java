@@ -2,6 +2,7 @@
 
 import static org.junit.Assert.*;
 
+import Vehicle.CarRepairShop;
 import Vehicle.Saab95;
 import org.junit.Test;
 import java.awt.*;
