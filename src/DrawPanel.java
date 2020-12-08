@@ -1,10 +1,8 @@
+import Vehicle.Vehicle;
+
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -29,7 +27,7 @@ public class DrawPanel extends JPanel {
 
 
     // Initializes the panel and reads the images
-    //DrawPanel List<Vehicle<
+    //DrawPanel List<Vehicle.Vehicle<
     public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
@@ -38,7 +36,7 @@ public class DrawPanel extends JPanel {
         try {
             // You can remove the "pics" part if running outside of IntelliJ and
             // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
+            // volvoImage = ImageIO.read(new File("Vehicle.Volvo240.jpg"));
 
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.

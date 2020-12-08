@@ -1,3 +1,5 @@
+package Vehicle;
+
 import java.awt.*;
 
 /** Represents a base model of a truck that a truck is based on.

@@ -1,3 +1,5 @@
+package Vehicle;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -27,7 +29,7 @@ public abstract class Vehicle implements Movable {
     private Color color; // Color of the vehicle
     private String modelName; // The vehicle model name
     private int directionAngle; // the the angle that the vehicle is facing towards.
-    private BufferedImage image; // an image of a Vehicle in a Canvas
+    private BufferedImage image; // an image of a Vehicle.Vehicle in a Canvas
 
     public Vehicle(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                    Color color, String modelName, int directionAngle) {
@@ -206,7 +208,7 @@ public abstract class Vehicle implements Movable {
 
     /** Gets the image for the vehicle
      *
-     * @return an image of a Vehicle in a Canvas
+     * @return an image of a Vehicle.Vehicle in a Canvas
      */
     public BufferedImage getImage() {
         return image;
@@ -227,7 +229,7 @@ public abstract class Vehicle implements Movable {
     }
 
     /**
-     * Move the Vehicle forwards.
+     * Move the Vehicle.Vehicle forwards.
      */
     @Override
     public void move() {
@@ -274,7 +276,7 @@ public abstract class Vehicle implements Movable {
     }
 
     /**
-     * The speedFactor methods exist in both Saab95 and Volvo240.
+     * The speedFactor methods exist in both Vehicle.Saab95 and Vehicle.Volvo240.
      * The speedFactor's return values are different for volvo.speedFactor() respectively saab.speedFactor()
      */
     public abstract double speedFactor();

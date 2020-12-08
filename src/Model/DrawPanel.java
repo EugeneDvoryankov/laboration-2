@@ -3,19 +3,20 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import Vehicle.*;
 import java.util.List;
-
+import java.awt.*;
 /**This panel represent the animated part of the view with the car images.
 */
 public class DrawPanel extends JPanel {
 
     private IWorld world; // interface for world
-
+    private final int delay = 50;
     // The timer is started with an listener (see below) that executes the statements
     // each step between delays.
     private Timer timer = new Timer(delay, new TimerListener());
 
-    private TimeListener timeListener;
+
 
     List<Vehicle> vehicles;
 

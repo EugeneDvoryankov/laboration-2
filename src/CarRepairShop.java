@@ -1,19 +1,20 @@
 
+import Vehicle.*;
+
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 import java.util.List;
 
-/** Represents a Car Repair Shop.
+/** Represents a Vehicle.Vehicle.Car Repair Shop.
  *
- * A Car Repair Shop loads a number of cars, up to a maximum number that can vary between different workshops.
+ * A Vehicle.Vehicle.Car Repair Shop loads a number of cars, up to a maximum number that can vary between different workshops.
  * Some workshops should only be able to accommodate a certain type of car;
  * others can receive any car.
  * Trying to receive the "wrong" sort of car in a workshop should give a static (compile time) error.
  * When retrieving a car from the workshop, we must be able to get as specific static type information as possible.
- * Example: A car retrieved from a branded workshop that only handles the Volvo 240 should have static type Volvo240.
- * @param <C> a class that extends the Car, either the Volvo240 or Saab95 class
+ * Example: A car retrieved from a branded workshop that only handles the Volvo 240 should have static type Vehicle.Volvo240.
+ * @param <C> a class that extends the Vehicle.Vehicle.Car, either the Vehicle.Volvo240 or Vehicle.Saab95 class
  */
 public class CarRepairShop<C extends Car> {
     private List<C> cars;
@@ -25,11 +26,11 @@ public class CarRepairShop<C extends Car> {
     }
 
 
-    /** Adds a car to the Car Repair Shop.
+    /** Adds a car to the Vehicle.Vehicle.Car Repair Shop.
      * You can only add new cars to the repair shop if the maxSize isn't reached yet,
      * ie you can't add car if the shop is full.
      *
-     * @param item a Car
+     * @param item a Vehicle.Vehicle.Car
      */
     public void loadCar(C item){
         if(maxSize > cars.size()) {
@@ -37,7 +38,7 @@ public class CarRepairShop<C extends Car> {
         }
     }
 
-    /** Removes a car from the Car Repair Shop
+    /** Removes a car from the Vehicle.Vehicle.Car Repair Shop
      *
      * @param item a car
      */
@@ -46,7 +47,7 @@ public class CarRepairShop<C extends Car> {
     }
 
     /**
-     * Gets the list of cars currently in Car repair shop.
+     * Gets the list of cars currently in Vehicle.Vehicle.Car repair shop.
      * @return the list of cars currently in car repair shop.
      */
     public List<C> getCars() {
@@ -56,8 +57,8 @@ public class CarRepairShop<C extends Car> {
 
 
     public static void main(String[] args) {
-        Saab95 saab95 = new Saab95(4, 100,0, Color.black, "Saab95");
-        Volvo240 volvo240 = new Volvo240(4, 100,0, Color.black, "Volvo240");
+        Saab95 saab95 = new Saab95(4, 100,0, Color.black, "Vehicle.Saab95");
+        Volvo240 volvo240 = new Volvo240(4, 100,0, Color.black, "Vehicle.Volvo240");
         CarRepairShop<Saab95> saab95RepairShop = new CarRepairShop<>(2);
 
         saab95RepairShop.loadCar(saab95);

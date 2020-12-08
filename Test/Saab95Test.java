@@ -1,3 +1,4 @@
+import Vehicle.Saab95;
 import org.junit.Test;
 
 import java.awt.*;
@@ -5,7 +6,7 @@ import java.awt.*;
 import static org.junit.Assert.*;
 
 public class Saab95Test {
-    Saab95 saab95 = new Saab95(4,125,0, Color.black, "Saab95");
+    Saab95 saab95 = new Saab95(4,125,0, Color.black, "Vehicle.Saab95");
 
     @Test
     public void setTurboOn() {

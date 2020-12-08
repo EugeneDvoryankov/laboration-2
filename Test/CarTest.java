@@ -1,5 +1,6 @@
+import Vehicle.Volvo240;
 import org.junit.Test;
-import org.junit.Before;
+
 import java.awt.*;
 import static java.lang.System.out;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class CarTest {
 
-    Volvo240 volvo240 = new Volvo240(4, 100,0, Color.black, "Volvo240");
+    Volvo240 volvo240 = new Volvo240(4, 100,0, Color.black, "Vehicle.Volvo240");
 
     @Test
     public void getNrDoors() {
@@ -49,7 +50,7 @@ public class CarTest {
 
     @Test
     public void getModelName() {
-        assertEquals("Volvo240", volvo240.getModelName());
+        assertEquals("Vehicle.Volvo240", volvo240.getModelName());
     }
 
     @Test
@@ -123,7 +124,7 @@ public class CarTest {
 
     /*@Test
     public void gasWrong() {
-        Volvo240 volvo240 = new Volvo240();
+        Vehicle.Volvo240 volvo240 = new Vehicle.Volvo240();
         volvo240.setCurrentSpeed(90);
         volvo240.gas(-1);
         assertEquals(90, volvo240.getCurrentSpeed(), 0.001);
@@ -131,7 +132,7 @@ public class CarTest {
 
     @Test
     public void brakeCorrect() {
-        Volvo240 volvo240 = new Volvo240();
+        Vehicle.Volvo240 volvo240 = new Vehicle.Volvo240();
         volvo240.setCurrentSpeed(90);
         volvo240.brake(1);
         assertEquals(88.75, volvo240.getCurrentSpeed(), 0.001);
@@ -139,7 +140,7 @@ public class CarTest {
 
     @Test
     public void brakeWrong(){
-        Volvo240 volvo240 = new Volvo240();
+        Vehicle.Volvo240 volvo240 = new Vehicle.Volvo240();
         volvo240.setCurrentSpeed(90);
         volvo240.brake(-1);
         assertEquals(90, volvo240.getCurrentSpeed(), 0.001);

@@ -1,12 +1,14 @@
+package Vehicle;
+
 import java.awt.*;
 
-/** Represents a Volvo240 car.
+/** Represents a Vehicle.Volvo240 car.
  * It has the following attributes:
  * a final static double representing the trimFactor
  * The class also have following methods:
  * speedFactor()
  */
-public class Volvo240 extends Car{
+public class Volvo240 extends Car {
 
     private final static double trimFactor = 1.25;
 

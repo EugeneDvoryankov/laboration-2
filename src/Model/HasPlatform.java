@@ -1,6 +1,9 @@
 package Model;
+import Vehicle.*;
+import java.util.ArrayList;
 
 public class HasPlatform implements VehicleAttribute{
+    ArrayList<HasPlatform> hasPlatforms;
 
     /** Raises the platformAngle by 60° for all vehicles
      *

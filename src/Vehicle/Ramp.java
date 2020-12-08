@@ -1,3 +1,5 @@
+package Vehicle;
+
 public class Ramp {
     private boolean rampUp = true;
 

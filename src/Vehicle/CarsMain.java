@@ -1,7 +1,8 @@
+package Vehicle;
+
 import java.awt.*;
 
 import static java.lang.System.out;
-import static  java.lang.Math.*;
 
 
 public class CarsMain {

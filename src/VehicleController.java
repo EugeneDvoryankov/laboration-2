@@ -4,7 +4,7 @@ public class VehicleController {
 
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : model.world.vehicles
+        for (Vehicle.Vehicle vehicle : model.world.vehicles
         ) {
             vehicle.gas(gas);
         }
@@ -12,7 +12,7 @@ public class VehicleController {
 
     void brake(int amount) {
         double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : model.world.vehicles
+        for (Vehicle.Vehicle vehicle : model.world.vehicles
         ) {
             vehicle.brake(gas);
         }
@@ -44,13 +44,13 @@ public class VehicleController {
     }
 
     public void startAllVehicles() {
-        for(Vehicle vehicle : model.world.vehicles) {
+        for(Vehicle.Vehicle vehicle : model.world.vehicles) {
             vehicle.startEngine();
         }
     }
 
     public void stopAllVehicles() {
-        for(Vehicle vehicle : model.world.vehicles) {
+        for(Vehicle.Vehicle vehicle : model.world.vehicles) {
             vehicle.stopEngine();
         }
     }

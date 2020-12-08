@@ -1,10 +1,12 @@
+package Vehicle;
+
 import java.awt.*;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class CarTransporter extends Truck {
-    private final int maxSize; // the max number of cars that the CarTransporter can hold.
+    private final int maxSize; // the max number of cars that the Vehicle.Vehicle.CarTransporter can hold.
     private final List<Car> cars;
     private final Ramp ramp = new Ramp();
 
@@ -45,17 +47,17 @@ public class CarTransporter extends Truck {
 
 
     /**
-     * Gets a list of cars that are currently on the CarTransporter.
+     * Gets a list of cars that are currently on the Vehicle.Vehicle.CarTransporter.
      *
-     * @return List cars that contains the car's that are currently on the CarTransporter.
+     * @return List cars that contains the car's that are currently on the Vehicle.Vehicle.CarTransporter.
      */
     public List<Car> getCars() {
         return cars;
     }
 
-    /** Checks if car is close enough to CarTransporter for pickup.
+    /** Checks if car is close enough to Vehicle.Vehicle.CarTransporter for pickup.
      *
-     * @param c the car that you want to load on to the CarTransporter.
+     * @param c the car that you want to load on to the Vehicle.Vehicle.CarTransporter.
      * @return boolean true if the car is close enough, otherwise false.
      */
     public boolean isCarCloseEnough(Car c) {
@@ -79,7 +81,7 @@ public class CarTransporter extends Truck {
      * Cars can only be loaded if: the carTransporter is stationary
      * ramp is down, and the cars are reasonably close to car
      *
-     * @param car a Car
+     * @param car a Vehicle.Vehicle.Car
      */
     public void loadCar(Car car) {
         if (canLoadCar(car) && isCarStationary(car)) {
@@ -90,7 +92,7 @@ public class CarTransporter extends Truck {
     /**
      * Unloads a car from the carTransporter's ramp
      * Cars can only be unloaded if: the carTransporter is stationary
-     * ramp is down, and the cars are reasonably close to CarTransporter.
+     * ramp is down, and the cars are reasonably close to Vehicle.Vehicle.CarTransporter.
      *
      */
     public void unloadCar() {
@@ -110,7 +112,7 @@ public class CarTransporter extends Truck {
 
 
     /**
-     * Checks if CarTransporter can load the car.
+     * Checks if Vehicle.Vehicle.CarTransporter can load the car.
      *
      * @param car the car that wants to be loaded
      * @return a boolean that's true if car can be loaded, otherwise false
@@ -122,11 +124,11 @@ public class CarTransporter extends Truck {
         return false;
     }
   
- //CarTransporter can't load itself since it doesn't extend car(it extends vehicle).
+ //Vehicle.Vehicle.CarTransporter can't load itself since it doesn't extend car(it extends vehicle).
 
     /**
-     * Checks if CarTransporter can unload a car.
-     * CarTransporter has to contain at least one car, if a car is supposed to be unloaded
+     * Checks if Vehicle.Vehicle.CarTransporter can unload a car.
+     * Vehicle.Vehicle.CarTransporter has to contain at least one car, if a car is supposed to be unloaded
      * @return boolean that is true if cartransporter can unload car, otherwise false.
      */
     public boolean canUnloadCar() {
@@ -135,7 +137,7 @@ public class CarTransporter extends Truck {
     }
 
     /**
-     * Checks if a car can interact with CarTransporter, ie if CarTransporter is stationary, car is close enough and ramp is down
+     * Checks if a car can interact with Vehicle.Vehicle.CarTransporter, ie if Vehicle.Vehicle.CarTransporter is stationary, car is close enough and ramp is down
      *
      * @return boolean representing true if car can be loaded/removed, otherwise false
      */
@@ -175,8 +177,8 @@ public class CarTransporter extends Truck {
         return sb.toString();
     }
 
-    /** Moves the CarTransporter forwards in a certain direction.
-     * Changes x and y values for CarTransporter, as well as for the cars that are loaded onboard.
+    /** Moves the Vehicle.Vehicle.CarTransporter forwards in a certain direction.
+     * Changes x and y values for Vehicle.Vehicle.CarTransporter, as well as for the cars that are loaded onboard.
      */
     @Override
     public void move() {

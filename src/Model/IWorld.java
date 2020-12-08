@@ -1,4 +1,5 @@
 package Model;
+import Vehicle.*;
 
 public interface IWorld {
     /** Updates the drawPanel based on vehicles movement

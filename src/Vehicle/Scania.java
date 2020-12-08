@@ -1,17 +1,20 @@
+package Vehicle;
+
+import Vehicle.HasPlatform;
 
 import java.awt.*;
 
 /**
- * Represents a Scania truck
+ * Represents a Vehicle.Scania truck
  *
  * The class has the following attributes:
- * The Scania's platformAngle
+ * The Vehicle.Scania's platformAngle
  * Has a getter and a setter for platformAngle
  * Also contains raisePlatform(), lowerPlatform() and isPlatformRaised,
  * for the purpose of increasing and decreasing platform angle
  * and to check if platform is raised (angle is greater than zero)
  */
-public class Scania extends Truck implements HasPlatform{
+public class Scania extends Truck implements HasPlatform {
 
     private final Ramp ramp = new Ramp();
     private int platformAngle; // the angle the platform is at, the platform is considered a ramp
@@ -32,9 +35,9 @@ public class Scania extends Truck implements HasPlatform{
         stopEngine();
     }
 
-    /** Gets platformAngle of the Scania
+    /** Gets platformAngle of the Vehicle.Scania
      *
-     * @return the platformAngle of the Scania
+     * @return the platformAngle of the Vehicle.Scania
      */
     public int getPlatformAngle() {
         return platformAngle;
@@ -134,7 +137,7 @@ public class Scania extends Truck implements HasPlatform{
         return getPlatformAngle() > 0;
     }
 
-    /** Returns a speedFactor based on Scania's enginePower.
+    /** Returns a speedFactor based on Vehicle.Scania's enginePower.
      * @return the speedFactor
      * */
     @Override

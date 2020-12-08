@@ -1,3 +1,4 @@
+import Vehicle.Volvo240;
 import org.junit.Test;
 
 
@@ -8,7 +9,7 @@ import static org.junit.Assert.*;
 public class CarTransporterTest {
     CarTransporter cartransporter = new CarTransporter(2, 350, 0, Color.red, "Cartransporter",
             3);
-    Volvo240 volvo240 = new Volvo240(4, 100, 0, Color.black, "Volvo240");
+    Volvo240 volvo240 = new Volvo240(4, 100, 0, Color.black, "Vehicle.Volvo240");
 
     @Test
     public void isCarCloseEnoughCorrect() {

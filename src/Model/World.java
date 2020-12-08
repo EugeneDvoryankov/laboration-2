@@ -1,5 +1,5 @@
 package Model;
-
+import Vehicle.*;
 import Model.*;
 
 import java.util.ArrayList;

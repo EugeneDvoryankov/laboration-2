@@ -1,3 +1,4 @@
+import Vehicle.Scania;
 import org.junit.Test;
 
 import java.awt.*;
@@ -6,7 +7,7 @@ import static org.junit.Assert.*;
 
 class ScaniaTest {
 
-    Scania scania = new Scania(2,350,0, Color.green,"Scania" );
+    Scania scania = new Scania(2,350,0, Color.green,"Vehicle.Scania" );
 
     @Test
     public void isRampRaised() {
@@ -79,14 +80,14 @@ class ScaniaTest {
 
     @Test
     public void shouldGas() {
-        Scania scania = new Scania(2,350,0, Color.green,"Scania" );
+        Vehicle.Scania scania = new Vehicle.Scania(2,350,0, Color.green,"Vehicle.Scania" );
         scania.gas(1);
         assertEquals(3.5, scania.getCurrentSpeed());
     }
 
     @Test
     public void shouldNotGas() {
-        Scania scania = new Scania(2,350,0, Color.green,"Scania" );
+        Vehicle.Scania scania = new Vehicle.Scania(2,350,0, Color.green,"Vehicle.Scania" );
         scania.raiseRamp(45);
         scania.gas(1);
         assertEquals(0, scania.getCurrentSpeed());
