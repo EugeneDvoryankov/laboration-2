@@ -1,3 +1,5 @@
+package Model;
+
 public class HasTurbo implements VehicleAttribute{
 
     /** Sets turbo On for all vehicles

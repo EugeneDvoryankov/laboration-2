@@ -1,4 +1,4 @@
-
+package Model;
 
 public interface IWorld {
     /** Updates the drawPanel based on vehicles movement

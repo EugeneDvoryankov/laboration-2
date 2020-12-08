@@ -1,3 +1,5 @@
+package Model;
+
 public class Model {
     private DrawPanel drawPanel;
     private IWorld world;

@@ -1,3 +1,5 @@
+package Model;
+
 import Model.*;
 
 import java.awt.event.ActionEvent;

@@ -1,3 +1,5 @@
+package Model;
+
 public class HasPlatform implements VehicleAttribute{
 
     /** Raises the platformAngle by 60° for all vehicles
