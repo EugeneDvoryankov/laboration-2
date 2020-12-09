@@ -14,7 +14,7 @@ public class VehicleView {
         private static final int Y = 800;
 
         // The controller member
-        CarController carC;
+        VehicleController vehicleC;
 
         DrawPanel drawPanel = new DrawPanel(X, Y-240);
 
@@ -36,8 +36,8 @@ public class VehicleView {
         JButton stopButton = new JButton("Stop all cars");
 
         // Constructor
-        public CarView(String framename, CarController cc){
-            this.carC = cc;
+        public CarView(String framename, VehicleController vc){
+            this.vehicleC = vc;
             initComponents(framename);
         }
 
@@ -100,14 +100,14 @@ public class VehicleView {
             gasButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.gas(gasAmount);
+                    vehicleC.gas(gasAmount);
                 }
 
             });
             brakeButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.brake(gasAmount);
+                    vehicleC.brake(gasAmount);
                 }
 
             });
@@ -115,7 +115,7 @@ public class VehicleView {
             turboOnButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.turboOn();
+                    vehicleC.turboOn();
                 }
 
             });
@@ -123,21 +123,21 @@ public class VehicleView {
             turboOffButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.turboOff();
+                    vehicleC.turboOff();
                 }
 
             });
             liftBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.liftBed();
+                    vehicleC.liftBed();
                 }
 
             });
             lowerBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.lowerBed();
+                    vehicleC.lowerBed();
                 }
 
             });
@@ -145,14 +145,14 @@ public class VehicleView {
             startButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.startAllVehicles();
+                    vehicleC.startAllVehicles();
                 }
 
             });
             stopButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    carC.stopAllVehicles();
+                    vehicleC.stopAllVehicles();
                 }
 
             });

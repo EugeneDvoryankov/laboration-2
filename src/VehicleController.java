@@ -1,7 +1,16 @@
-public class VehicleController {
-    /*
-    private Model model;
+import Model.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class VehicleController {
+
+    private Model model;
+    private VehicleAttribute hasTurboModel;
+
+    public VehicleController() {
+
+    }
     void gas(int amount) {
         double gas = ((double) amount) / 100;
         for (Vehicle.Vehicle vehicle : model.world.vehicles
@@ -19,9 +28,9 @@ public class VehicleController {
     }
 
     public void turboOn() {
-        for(VehicleAttribute hasTurbo: model.HasTurboModel.hasTurboList) {
+        hasTurboModel.turboOn();
+        for(VehicleAttribute hasTurbo: hasTurboList) {
             hasTurbo.setTurboOn();
-            //saab.stopEngine();
         }
     }
 
