@@ -19,9 +19,7 @@ public class Application {
     public static void main(String[] args) {
 
         Application app = new Application();
-        VehicleView view;
-        VehicleController vc = new VehicleController();
-        World world = new World(app.vehicles);
+
 
         Volvo240 volvo = new Volvo240(0, 0, 4, 100, 0, Color.red, "Vehicle.Volvo240", 90);
         Saab95 saab95 = new Saab95(0,100,10,100,0, Color.black, "Vehicle.Saab95",90);
@@ -30,6 +28,10 @@ public class Application {
         app.vehicles.add(volvo);
         app.hasTurbo.add(saab95);
         app.hasPlatform.add(scania);
+
+        VehicleView view;
+        VehicleController vc = new VehicleController();
+        World world = new World(app.vehicles, app.hasTurbo, app.hasPlatform);
 
         view = new VehicleView("CarSim 1.0", vc);
 

@@ -1,12 +1,20 @@
 package Model;
+
+import Vehicle.HasPlatform;
+import Vehicle.HasTurbo;
 import Vehicle.Vehicle;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
 public class World implements IWorld{
-    private ArrayList<Vehicle> vehicles;
+
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
+    ArrayList<HasTurbo> hasTurbo = new ArrayList<>();
+    ArrayList<HasPlatform> hasPlatform = new ArrayList<>();
     private DrawPanel drawPanel;
     private final int delay = 50;
 
@@ -16,41 +24,43 @@ public class World implements IWorld{
         this.vehicles = vehicles;
     }
 
-    /** Updates the drawPanel based on vehicles movement
-     * Assuming each image has x(width) = 100, and y(height) = 60.
-     * The green frame they're in has the dimensions x = 684 X 500 = y.
-     *
-     */
-    public void update(){
-        for (Vehicle vehicle : vehicles) {
-            vehicle.move();
+    public World(ArrayList<Vehicle> vehicles, ArrayList<HasTurbo> hasTurbo, ArrayList<HasPlatform> hasPlatform) {
+        this.vehicles = vehicles;
+        this.hasTurbo = hasTurbo;
+        this.hasPlatform = hasPlatform;
+    }
 
-            if (isOutOfBoundsDown(vehicle)) {
-                //frame.drawPanel.moveit(x, 500);
-                vehicle.setY(500);
-                vehicle.invertDirection();
-            } else if (isOutOfBoundsUp(vehicle)) {
-                //frame.drawPanel.moveit(x, 0);
-                vehicle.setY(0);
-                vehicle.invertDirection();
+
+    private class TimerListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            for (Vehicle vehicle : vehicles) {
+                    vehicle.move();
+
+                    if (isOutOfBoundsDown(vehicle)) {
+                        //frame.drawPanel.moveit(x, 500);
+                        vehicle.setY(500);
+                        vehicle.invertDirection();
+                    } else if (isOutOfBoundsUp(vehicle)) {
+                        //frame.drawPanel.moveit(x, 0);
+                        vehicle.setY(0);
+                        vehicle.invertDirection();
+                    }
+
+                    if (isOutOfBoundsRight(vehicle)) {
+                        //frame.drawPanel.moveit(684, y);
+                        vehicle.setX(684);
+                        vehicle.invertDirection();
+                    } else if (isOutOfBoundsLeft(vehicle)) {
+                        //frame.drawPanel.moveit(0, y);
+                        vehicle.setX(0);
+                        vehicle.invertDirection();
+                    }
+
+                    drawPanel.repaint();
             }
-
-            if (isOutOfBoundsRight(vehicle)) {
-                //frame.drawPanel.moveit(684, y);
-                vehicle.setX(684);
-                vehicle.invertDirection();
-            } else if (isOutOfBoundsLeft(vehicle)) {
-                //frame.drawPanel.moveit(0, y);
-                vehicle.setX(0);
-                vehicle.invertDirection();
-            }
-
-
-            // repaint() calls the paintComponent method of the panel
-            //world.update();
-            drawPanel.repaint();
         }
     }
+
 
     /** Gets the list of vehicles
      *

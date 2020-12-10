@@ -7,7 +7,7 @@ public interface IWorld {
      * The green frame they're in has the dimensions x = 684 X 500 = y.
      *
      */
-    public void update();
+    //public void update();
 
     /** Checks whether the x coordinate of a vehicle is less than zero pixels.
      *

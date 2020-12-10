@@ -1,5 +1,7 @@
 package Model;
+
 import Vehicle.Vehicle;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -14,11 +16,6 @@ public class DrawPanel extends JPanel {
 
     private IWorld world; // interface for world
     private final int delay = 50;
-    // The timer is started with an listener (see below) that executes the statements
-    // each step between delays.
-    private Timer timer = new Timer(delay, new TimerListener());
-
-
 
     List<Vehicle> vehicles;
 
@@ -49,9 +46,9 @@ public class DrawPanel extends JPanel {
 
             // Rememember to rightclick src New -> Package -> name: Model.pics -> MOVE *.jpg to Model.pics.
             // if you are starting in IntelliJ.
-            volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("Model/pics/Volvo240.jpg"));
-            saabImage = ImageIO.read(DrawPanel.class.getResourceAsStream("Model/pics/Saab95.jpg"));
-            scaniaImage = ImageIO.read(DrawPanel.class.getResourceAsStream("Model/pics/Scania.jpg"));
+            volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
+            saabImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
+            scaniaImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -66,8 +63,8 @@ public class DrawPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(volvoImage, (int)vehicles.get(0).getX(), (int)vehicles.get(0).getY(), null); // see javadoc for more info on the parameters
-        g.drawImage(saabImage, (int)vehicles.get(1).getX(), (int)vehicles.get(1).getY(), null);
-        g.drawImage(scaniaImage, (int)vehicles.get(2).getX(), (int)vehicles.get(2).getY(), null);
+        g.drawImage(volvoImage, getX(), getY(), null); // see javadoc for more info on the parameters
+        g.drawImage(saabImage, getX(), getY(), null);
+        g.drawImage(scaniaImage, getX(), getY(), null);
     }
 }
