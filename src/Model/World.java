@@ -1,12 +1,16 @@
 package Model;
-import Vehicle.*;
-import Model.*;
+import Vehicle.Vehicle;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class World implements IWorld{
     private ArrayList<Vehicle> vehicles;
+    private DrawPanel drawPanel;
+    private final int delay = 50;
+
+    public Timer timer = new Timer(delay, new TimerListener());
 
     public World(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
@@ -19,19 +23,7 @@ public class World implements IWorld{
      */
     public void update(){
         for (Vehicle vehicle : vehicles) {
-                /*
-                Assuming each image has x(width) = 100, and y(height) = 60.
-                The green frame they're in has the dimensions x = 784 X 560 = y.
-                I'm really not sure about these numbers, gotten from trial and error.
-                 */
-
             vehicle.move();
-            // int x = (int) Math.round(vehicle.getX());
-            //int y = (int) Math.round(vehicle.getY());
-
-
-            //frame.drawPanel.moveit(x, y);
-
 
             if (isOutOfBoundsDown(vehicle)) {
                 //frame.drawPanel.moveit(x, 500);
@@ -56,7 +48,7 @@ public class World implements IWorld{
 
             // repaint() calls the paintComponent method of the panel
             //world.update();
-            frame.drawPanel.repaint();
+            drawPanel.repaint();
         }
     }
 

@@ -1,14 +1,11 @@
-package Model;
-import Vehicle.*;
+package Controller;
 
-import javax.swing.*;
+import Vehicle.HasPlatform;
+
 import java.util.ArrayList;
 
-public class HasPlatformModel implements VehicleAttribute{
-    ArrayList<HasPlatform> hasPlatformList;
-    JButton liftBedButton = new JButton("Vehicle.Scania Lift Bed");
-    JButton lowerBedButton = new JButton("Lower Lift Bed");
-    JPanel platformPanel = new JPanel();
+public class PlatformController {
+    private ArrayList<HasPlatform> hasPlatformList = new ArrayList<>();
 
     /** Raises the platformAngle by 60° for all vehicles */
     public void raisePlatformAngle() {
@@ -21,6 +18,13 @@ public class HasPlatformModel implements VehicleAttribute{
     public void lowerPlatformAngle() {
         for (HasPlatform hasPlatform: hasPlatformList) {
             hasPlatform.lowerPlatformAngle(60);
+        }
+    }
+
+    /** Adds a Vehicle to List */
+    public void addVehicle(){
+        for (HasPlatform hasPlatform: hasPlatformList) {
+            hasPlatformList.add(hasPlatform);
         }
     }
 }

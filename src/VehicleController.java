@@ -1,7 +1,5 @@
-import Model.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import Model.Model;
+import Model.VehicleAttribute;
 
 public class VehicleController {
 
@@ -11,6 +9,7 @@ public class VehicleController {
     public VehicleController() {
 
     }
+    /*
     void gas(int amount) {
         double gas = ((double) amount) / 100;
         for (Vehicle.Vehicle vehicle : model.world.vehicles
@@ -64,5 +63,5 @@ public class VehicleController {
         }
     }
 
-     */
+*/
 }

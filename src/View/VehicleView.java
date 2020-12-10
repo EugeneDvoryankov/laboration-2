@@ -1,13 +1,25 @@
+package View;
 
+import Controller.PlatformController;
+import Controller.TurboController;
+import Controller.VehicleController;
+import Model.DrawPanel;
 
-public class VehicleView {
-    /*
-    public class CarView extends JFrame {
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class VehicleView extends JFrame{
         private static final int X = 800;
         private static final int Y = 800;
 
         // The controller member
         VehicleController vehicleC;
+        TurboController turboController;
+        PlatformController platformController;
 
         DrawPanel drawPanel = new DrawPanel(X, Y-240);
 
@@ -29,7 +41,7 @@ public class VehicleView {
         JButton stopButton = new JButton("Stop all cars");
 
         // Constructor
-        public CarView(String framename, VehicleController vc){
+        public VehicleView (String framename, VehicleController vc){
             this.vehicleC = vc;
             initComponents(framename);
         }
@@ -108,7 +120,7 @@ public class VehicleView {
             turboOnButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.turboOn();
+                    turboController.turboOn();
                 }
 
             });
@@ -116,21 +128,21 @@ public class VehicleView {
             turboOffButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.turboOff();
+                    turboController.turboOff();
                 }
 
             });
             liftBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.liftBed();
+                    platformController.raisePlatformAngle();
                 }
 
             });
             lowerBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.lowerBed();
+                    platformController.lowerPlatformAngle();
                 }
 
             });
@@ -165,6 +177,5 @@ public class VehicleView {
             // Make sure the frame exits when "x" is pressed
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         }
-    }
-    */
+
 }
