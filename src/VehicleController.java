@@ -2,7 +2,7 @@ import Model.Model;
 import Model.VehicleAttribute;
 
 public class VehicleController {
-
+/*
     private Model model;
     private VehicleAttribute hasTurboModel;
 
