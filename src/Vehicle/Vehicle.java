@@ -60,7 +60,7 @@ public abstract class Vehicle implements Movable {
         this.image = image;
     }
 
-
+/*
     public void notifyListeners() {
         for(Observer o:observers) {
             o.updateView();
@@ -75,6 +75,8 @@ public abstract class Vehicle implements Movable {
     public void removeListener(Observer o) {
         observers.remove(o);
     }
+
+ */
 
     /**
      * Get the X coordinate (For testing purposes)
@@ -255,7 +257,7 @@ public abstract class Vehicle implements Movable {
         double angleInRadian = (getDirectionAngle() * (Math.PI / 180));
         setX(getX() + sin(angleInRadian) * getCurrentSpeed());
         setY(getY() - cos(angleInRadian) * getCurrentSpeed());
-        notifyListeners();
+        //notifyListeners();
     }
 
     /**

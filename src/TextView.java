@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class TextView extends JFrame implements Observer {
+public class TextView extends JFrame  {
 ArrayList<Vehicle> vehicles = new ArrayList<>();
     JPanel textPanel = new JPanel();
     TextLabel textLabel = new TextLabel();

@@ -4,12 +4,31 @@ import Vehicle.Vehicle;
 import java.util.ArrayList;
 
 public class World {
+
     private ArrayList<Vehicle> vehicles= new ArrayList<>();
+    //private CollectionVehicles vehicles;
     private ArrayList<Observer> listeners = new ArrayList<>();
+
+    public World(){
+
+
+    }
+
+    //public World(CollectionVehicles vehicles){
+     //   this.vehicles = vehicles;
+
+    //}
+
+    private void startAllVehicles() {
+        for(Vehicle v:vehicles) {
+            v.startEngine();
+        }
+    }
+
 
     public void notifyView(){
         for(Observer o: listeners) {
-            o.updateView();
+            o.updateView(vehicles);
         }
     }
 
@@ -21,7 +40,12 @@ public class World {
         listeners.remove(o);
     }
 
+    public void addVehicle(Vehicle vehicle) {
+        vehicles.add(vehicle);
+    }
+
     public void createVolvo(){
+
 
     }
 
@@ -76,5 +100,8 @@ public class World {
     private boolean isOutOfBoundsDown(Vehicle car) {
         return car.getY() > 500;
     }
+
+
+
 
 }
