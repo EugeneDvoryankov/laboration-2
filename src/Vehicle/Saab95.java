@@ -3,7 +3,10 @@ package Vehicle;
 import Vehicle.HasTurbo;
 import Vehicle.Turbo;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 /**
  * Represents a Vehicle.Saab95 car.
@@ -14,6 +17,19 @@ import java.awt.*;
  */
 public class Saab95 extends Car implements HasTurbo {
 private Turbo turbo = new Turbo();
+private BufferedImage saabImage;
+
+    public Saab95(double x, double y, String modelName) {
+        super(x,y,4,100,0,Color.cyan, modelName, 90);
+        stopEngine();
+        try {
+
+            saabImage = ImageIO.read(this.getClass().getResourceAsStream("pics/Saab95.jpg"));
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 
     public Saab95(double x, double y,int nrDoors, double enginePower, double currentSpeed,
                   Color color, String modelName, int directionAngle){
@@ -29,6 +45,10 @@ private Turbo turbo = new Turbo();
         stopEngine();
     }
 
+    @Override
+    public BufferedImage getImage() {
+        return saabImage;
+    }
     /**
      * Sets turboOn true.
      */

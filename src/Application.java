@@ -18,7 +18,7 @@ public class Application {
         DrawPanel drawPanel = new DrawPanel(800, 560);
         View view = new View("CarSim", drawPanel);
         TextView textView = new TextView("CarText");
-        Clock clock = new Clock();
+        //Clock clock = new Clock();
 
         volvo.addListener(drawPanel);
         volvo2.addListener(drawPanel);

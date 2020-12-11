@@ -29,6 +29,7 @@ public class Volvo240 extends Car {
             ex.printStackTrace();
         }
     }
+
     public Volvo240(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                     Color color, String modelName, int directionAngle, BufferedImage image){
         super(x,y, nrDoors, enginePower, currentSpeed, color, modelName,directionAngle, image);

@@ -3,6 +3,7 @@ package Vehicle;
 import Vehicle.HasPlatform;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 /**
  * Represents a Vehicle.Scania truck
@@ -18,6 +19,7 @@ public class Scania extends Truck implements HasPlatform {
 
     private final Ramp ramp = new Ramp();
     private int platformAngle; // the angle the platform is at, the platform is considered a ramp
+    private BufferedImage scan;
 
     public Scania(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                   Color color, String modelName, int directionAngle){

@@ -18,7 +18,7 @@ public class DrawPanel extends JPanel implements Observer {
         initComponents(x, y);
     }
 
-    public void initComponents(int x, int y) {
+    private void initComponents(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
