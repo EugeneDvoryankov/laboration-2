@@ -2,24 +2,25 @@ package Controller;
 
 import Vehicle.Application;
 import Vehicle.HasTurbo;
+import Vehicle.Vehicle;
 
 import javax.swing.*;
-import java.util.ArrayList;
 
 public class TurboController {
-    Application application;
 
-    private ArrayList<HasTurbo> hasTurboList = new ArrayList<>();
-    JButton turboOnButton = new JButton("Saab Vehicle.Turbo on");
-    JButton turboOffButton = new JButton("Saab Vehicle.Turbo off");
-    JPanel turboPanel = new JPanel();
+    Application application = new Application();
+    public JButton turboOnButton = new JButton("Turbo on");
+    public JButton turboOffButton = new JButton("Turbo off");
+
 
     /** Sets turbo On for all vehicles
      *
      */
     public void turboOn() {
-        for (HasTurbo hasTurboModel : hasTurboList ) {
-            hasTurboModel.setTurboOn();
+        for(Vehicle vehicle : application.getVehicles()){
+            if(vehicle instanceof HasTurbo){
+                ((HasTurbo) vehicle).setTurboOn();
+            }
         }
     }
 
@@ -27,16 +28,10 @@ public class TurboController {
      *
      */
     public void turboOff() {
-        for (HasTurbo hasTurboModel : hasTurboList ) {
-            hasTurboModel.setTurboOff();
+        for(Vehicle vehicle : application.getVehicles()){
+            if(vehicle instanceof HasTurbo){
+                ((HasTurbo) vehicle).setTurboOff();
+            }
         }
     }
-
-    /** Adds a Vehicle to List */
-    public void addVehicle(){
-        for (HasTurbo hasTurboModel : hasTurboList ) {
-            hasTurboList.add(hasTurboModel);
-        }
-    }
-
 }

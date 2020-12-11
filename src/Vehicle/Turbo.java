@@ -1,8 +1,6 @@
 package Vehicle;
 
-import Vehicle.HasTurbo;
-
-public class Turbo implements HasTurbo {
+public class Turbo{
     private boolean turboOn;
     /**
      * Sets turboOn true.

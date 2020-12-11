@@ -7,22 +7,27 @@ import javax.swing.*;
 
 public class VehicleController extends JFrame {
 
-        Application application;
+    Application application = new Application();
 
-        private static final int X = 800;
-        private static final int Y = 800;
+    TurboController turboController = new TurboController();
+    PlatformController platformController = new PlatformController();
 
-        JPanel controlPanel = new JPanel();
-        JPanel gasPanel = new JPanel();
-        JSpinner gasSpinner = new JSpinner();
-        int gasAmount = 0;
-        JLabel gasLabel = new JLabel("Amount of gas");
-        JButton gasButton = new JButton("Gas");
-        JButton brakeButton = new JButton("Brake");
+    public JPanel controlPanel = new JPanel();
 
+    public JPanel gasPanel = new JPanel();
+    public JSpinner gasSpinner = new JSpinner();
+    public int gasAmount = 0;
+    public JLabel gasLabel = new JLabel("Amount of gas");
 
-        JButton startButton = new JButton("Start all cars");
-        JButton stopButton = new JButton("Stop all cars");
+    public JButton gasButton = new JButton("Gas");
+    public JButton brakeButton = new JButton("Brake");
+    public JButton turboOnButton = turboController.turboOnButton;
+    public JButton turboOffButton = turboController.turboOffButton;
+    public JButton liftBedButton = platformController.liftBedButton;
+    public JButton lowerBedButton = platformController.lowerBedButton;
+
+    public JButton startButton = new JButton("Start all cars");
+    public JButton stopButton = new JButton("Stop all cars");
 
 
     /** Calls the <P>gas</P> method for each vehicle once
@@ -70,13 +75,4 @@ public class VehicleController extends JFrame {
             vehicle.stopEngine();
         }
     }
-
-    /** Adds a Vehicle to List */
-    public void addVehicle(){
-        for (Vehicle vehicle : application.getVehicles()
-        ) {
-            application.getVehicles().add(vehicle);
-        }
-    }
-
 }

@@ -37,27 +37,4 @@ public interface IWorld {
      */
     boolean isOutOfBoundsDown(Vehicle vehicle);
 
-    /** Calls the <P>gas</P> method for each vehicle once
-     *
-     * Takes a number between 0 and 100
-     * @param amount how hard you press the gas
-     */
-    void gas(int amount);
-
-    /** Calls the <P>brake</P> method for each vehicle once
-     *
-     * Takes a number between 0 and 100
-     * @param amount how hard you press the brake
-     */
-    void brake(int amount);
-
-    /** Calls the <P>startEngine</P> method for each vehicle
-     *
-     */
-    void startAllVehicles();
-
-    /** Calls the <P>stopEngine</P> method for each vehicle
-     *
-     */
-    void stopAllVehicles();
 }

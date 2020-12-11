@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class Application {
     ArrayList<Vehicle> vehicles = new ArrayList<>();
-    ArrayList<HasTurbo> hasTurbo = new ArrayList<>();
-    ArrayList<HasPlatform> hasPlatform = new ArrayList<>();
 
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
@@ -26,12 +24,12 @@ public class Application {
         Scania scania = new Scania(0,200,2,300,0,Color.blue,"Vehicle.Scania", 90);
 
         app.vehicles.add(volvo);
-        app.hasTurbo.add(saab95);
-        app.hasPlatform.add(scania);
+        app.vehicles.add(saab95);
+        app.vehicles.add(scania);
 
         VehicleView view;
         VehicleController vc = new VehicleController();
-        World world = new World(app.vehicles, app.hasTurbo, app.hasPlatform);
+        World world = new World(app.vehicles);
 
         view = new VehicleView("CarSim 1.0", vc);
 

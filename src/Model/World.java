@@ -1,7 +1,5 @@
 package Model;
 
-import Vehicle.HasPlatform;
-import Vehicle.HasTurbo;
 import Vehicle.Vehicle;
 
 import javax.swing.*;
@@ -13,9 +11,7 @@ import java.util.List;
 public class World implements IWorld{
 
     ArrayList<Vehicle> vehicles = new ArrayList<>();
-    ArrayList<HasTurbo> hasTurbo = new ArrayList<>();
-    ArrayList<HasPlatform> hasPlatform = new ArrayList<>();
-    private DrawPanel drawPanel;
+
     private final int delay = 50;
 
     public Timer timer = new Timer(delay, new TimerListener());
@@ -23,13 +19,6 @@ public class World implements IWorld{
     public World(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
     }
-
-    public World(ArrayList<Vehicle> vehicles, ArrayList<HasTurbo> hasTurbo, ArrayList<HasPlatform> hasPlatform) {
-        this.vehicles = vehicles;
-        this.hasTurbo = hasTurbo;
-        this.hasPlatform = hasPlatform;
-    }
-
 
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -106,47 +95,4 @@ public class World implements IWorld{
         return vehicle.getY() > 500;
     }
 
-    /** Calls the <P>gas</P> method for each vehicle once
-     *
-     * Takes a number between 0 and 100
-     * @param amount how hard you press the gas
-     */
-    public void gas(int amount) {
-        double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : vehicles
-        ) {
-            vehicle.gas(gas);
-        }
-    }
-
-    /** Calls the <P>brake</P> method for each vehicle once
-     *
-     * Takes a number between 0 and 100
-     * @param amount how hard you press the brake
-     */
-    public void brake(int amount) {
-        double gas = ((double) amount) / 100;
-        for (Vehicle vehicle : vehicles
-        ) {
-            vehicle.brake(gas);
-        }
-    }
-
-    /** Calls the <P>startEngine</P> method for each vehicle
-     *
-     */
-    public void startAllVehicles() {
-        for(Vehicle vehicle: vehicles) {
-            vehicle.startEngine();
-        }
-    }
-
-    /** Calls the <P>stopEngine</P> method for each vehicle
-     *
-     */
-    public void stopAllVehicles() {
-        for(Vehicle vehicle: vehicles) {
-            vehicle.stopEngine();
-        }
-    }
 }

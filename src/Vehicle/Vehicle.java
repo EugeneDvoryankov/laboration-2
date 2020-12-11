@@ -21,6 +21,8 @@ import static java.lang.Math.*;
  */
 public abstract class Vehicle implements Movable {
 
+    public EventManager events;
+
     private double x; // The vehicle's x direction
     private double y; // The vehicle's y direction
     private int nrDoors; // Number of doors on the vehicle
@@ -217,15 +219,17 @@ public abstract class Vehicle implements Movable {
     /**
      * Start the engine
      */
-    public void startEngine() {
+    public void startEngine(){
         setCurrentSpeed(0.1);
+        events.notifyListener(this.getModelName(), this.getCurrentSpeed());
     }
 
     /**
      * Stop the engine
      */
-    public void stopEngine() {
+    public void stopEngine(){
         setCurrentSpeed(0);
+        events.notifyListener(this.getModelName(), this.getCurrentSpeed());
     }
 
     /**
@@ -313,6 +317,7 @@ public abstract class Vehicle implements Movable {
     public void gas(double amount) {
         if (amount >= 0 & amount <= 1) {
             incrementSpeed(amount);
+            events.notifyListener(this.getModelName(), this.getCurrentSpeed());
         }
     }
 
@@ -325,6 +330,7 @@ public abstract class Vehicle implements Movable {
     public void brake(double amount) {
         if (amount >= 0 & amount <= 1) {
             decrementSpeed(amount);
+            events.notifyListener(this.getModelName(), this.getCurrentSpeed());
         }
     }
 

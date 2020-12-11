@@ -4,6 +4,8 @@ import Controller.PlatformController;
 import Controller.TurboController;
 import Controller.VehicleController;
 import Model.DrawPanel;
+import Vehicle.Application;
+import Vehicle.EventListeners;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -12,37 +14,23 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VehicleView extends JFrame{
+public class VehicleView extends JFrame implements EventListeners {
         private static final int X = 800;
         private static final int Y = 800;
 
+
+        Application app;
+
         // The controller member
-        VehicleController vehicleC;
+        VehicleController vc;
+
         TurboController turboController;
         PlatformController platformController;
 
         DrawPanel drawPanel = new DrawPanel(X, Y-240);
 
-        JPanel controlPanel = new JPanel();
-
-        JPanel gasPanel = new JPanel();
-        JSpinner gasSpinner = new JSpinner();
-        int gasAmount = 0;
-        JLabel gasLabel = new JLabel("Amount of gas");
-
-        JButton gasButton = new JButton("Gas");
-        JButton brakeButton = new JButton("Brake");
-        JButton turboOnButton = new JButton("Saab Vehicle.Turbo on");
-        JButton turboOffButton = new JButton("Saab Vehicle.Turbo off");
-        JButton liftBedButton = new JButton("Vehicle.Scania Lift Bed");
-        JButton lowerBedButton = new JButton("Lower Lift Bed");
-
-        JButton startButton = new JButton("Start all cars");
-        JButton stopButton = new JButton("Stop all cars");
-
-        // Constructor
         public VehicleView (String framename, VehicleController vc){
-            this.vehicleC = vc;
+            this.vc = vc;
             initComponents(framename);
         }
 
@@ -63,61 +51,60 @@ public class VehicleView extends JFrame{
                             0, //min
                             100, //max
                             1);//step
-            gasSpinner = new JSpinner(spinnerModel);
-            gasSpinner.addChangeListener(new ChangeListener() {
+            vc.gasSpinner = new JSpinner(spinnerModel);
+            vc.gasSpinner.addChangeListener(new ChangeListener() {
                 public void stateChanged(ChangeEvent e) {
-                    gasAmount = (int) ((JSpinner)e.getSource()).getValue();
+                    vc.gasAmount = (int) ((JSpinner)e.getSource()).getValue();
                 }
             });
 
-            gasPanel.setLayout(new BorderLayout());
-            gasPanel.add(gasLabel, BorderLayout.PAGE_START);
-            gasPanel.add(gasSpinner, BorderLayout.PAGE_END);
+            vc.gasPanel.setLayout(new BorderLayout());
+            vc.gasPanel.add(vc.gasLabel, BorderLayout.PAGE_START);
+            vc.gasPanel.add(vc.gasSpinner, BorderLayout.PAGE_END);
 
-            this.add(gasPanel);
+            this.add(vc.gasPanel);
 
-            controlPanel.setLayout(new GridLayout(2,4));
+            vc.controlPanel.setLayout(new GridLayout(2,4));
 
-            controlPanel.add(gasButton, 0);
-            controlPanel.add(turboOnButton, 1);
-            controlPanel.add(liftBedButton, 2);
-            controlPanel.add(brakeButton, 3);
-            controlPanel.add(turboOffButton, 4);
-            controlPanel.add(lowerBedButton, 5);
-            controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
-            this.add(controlPanel);
-            controlPanel.setBackground(Color.CYAN);
-
-
-            startButton.setBackground(Color.blue);
-            startButton.setForeground(Color.green);
-            startButton.setPreferredSize(new Dimension(X/5-15,200));
-            this.add(startButton);
+            vc.controlPanel.add(vc.gasButton, 0);
+            vc.controlPanel.add(vc.turboOnButton, 1);
+            vc.controlPanel.add(vc.liftBedButton, 2);
+            vc.controlPanel.add(vc.brakeButton, 3);
+            vc.controlPanel.add(vc.turboOffButton, 4);
+            vc.controlPanel.add(vc.lowerBedButton, 5);
+            vc.controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
+            this.add(vc.controlPanel);
+            vc.controlPanel.setBackground(Color.CYAN);
 
 
-            stopButton.setBackground(Color.red);
-            stopButton.setForeground(Color.black);
-            stopButton.setPreferredSize(new Dimension(X/5-15,200));
-            this.add(stopButton);
+            vc.startButton.setBackground(Color.blue);
+            vc.startButton.setForeground(Color.green);
+            vc.startButton.setPreferredSize(new Dimension(X/5-15,200));
+            this.add(vc.startButton);
+
+
+            vc.stopButton.setBackground(Color.red);
+            vc.stopButton.setForeground(Color.black);
+            vc.stopButton.setPreferredSize(new Dimension(X/5-15,200));
+            this.add(vc.stopButton);
 
             // This actionListener is for the gas button only
-            // TODO: Create more for each component as necessary
-            gasButton.addActionListener(new ActionListener() {
+            vc.gasButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.gas(gasAmount);
+                    vc.gas(vc.gasAmount);
                 }
 
             });
-            brakeButton.addActionListener(new ActionListener() {
+            vc.brakeButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.brake(gasAmount);
+                    vc.brake(vc.gasAmount);
                 }
 
             });
 
-            turboOnButton.addActionListener(new ActionListener() {
+            vc.turboOnButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     turboController.turboOn();
@@ -125,21 +112,21 @@ public class VehicleView extends JFrame{
 
             });
 
-            turboOffButton.addActionListener(new ActionListener() {
+            vc.turboOffButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     turboController.turboOff();
                 }
 
             });
-            liftBedButton.addActionListener(new ActionListener() {
+            vc.liftBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     platformController.raisePlatformAngle();
                 }
 
             });
-            lowerBedButton.addActionListener(new ActionListener() {
+            vc.lowerBedButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     platformController.lowerPlatformAngle();
@@ -147,17 +134,17 @@ public class VehicleView extends JFrame{
 
             });
 
-            startButton.addActionListener(new ActionListener() {
+            vc.startButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.startAllVehicles();
+                    vc.startAllVehicles();
                 }
 
             });
-            stopButton.addActionListener(new ActionListener() {
+            vc.stopButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    vehicleC.stopAllVehicles();
+                    vc.stopAllVehicles();
                 }
 
             });
@@ -178,4 +165,8 @@ public class VehicleView extends JFrame{
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         }
 
+    @Override
+    public void update(String modelName, double currentSpeed){
+        String s = "<" + modelName + "> : <" + currentSpeed + ">";
+    }
 }

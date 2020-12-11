@@ -1,30 +1,31 @@
 package Controller;
 
+import Vehicle.Application;
 import Vehicle.HasPlatform;
+import Vehicle.Vehicle;
 
-import java.util.ArrayList;
+import javax.swing.*;
 
 public class PlatformController {
-    private ArrayList<HasPlatform> hasPlatformList = new ArrayList<>();
+    Application application = new Application();
+    public JButton liftBedButton = new JButton("Lift Bed");
+    public JButton lowerBedButton = new JButton("Lower Bed");
 
     /** Raises the platformAngle by 60° for all vehicles */
     public void raisePlatformAngle() {
-        for (HasPlatform hasPlatform: hasPlatformList) {
-            hasPlatform.raisePlatformAngle(60);
+        for(Vehicle vehicle : application.getVehicles()){
+            if(vehicle instanceof HasPlatform){
+                ((HasPlatform)vehicle).raisePlatformAngle(60);
+            }
         }
     }
 
     /** Lowers the platformAngle by 60° for all vehicles */
     public void lowerPlatformAngle() {
-        for (HasPlatform hasPlatform: hasPlatformList) {
-            hasPlatform.lowerPlatformAngle(60);
-        }
-    }
-
-    /** Adds a Vehicle to List */
-    public void addVehicle(){
-        for (HasPlatform hasPlatform: hasPlatformList) {
-            hasPlatformList.add(hasPlatform);
+        for(Vehicle vehicle : application.getVehicles()){
+            if(vehicle instanceof HasPlatform){
+                ((HasPlatform)vehicle).lowerPlatformAngle(60);
+            }
         }
     }
 }
