@@ -1,12 +1,9 @@
 package Vehicle;
 
-import Observer.Observer;
-
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
-import static java.lang.Math.*;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 
 /**
  * Represents a base model of a vehicle that all other vehicles are based on.
@@ -22,7 +19,7 @@ import static java.lang.Math.*;
  * Also contains gas and brake methods which in turn contain incrementSpeed and decrementSpeed methods,
  * for the purpose of increasing or decreasing the vehicle's speed.
  */
-public abstract class Vehicle implements Movable {
+public abstract class Vehicle implements Movable{
 
     private double x; // The vehicle's x direction
     private double y; // The vehicle's y direction
@@ -32,8 +29,7 @@ public abstract class Vehicle implements Movable {
     private Color color; // Color of the vehicle
     private String modelName; // The vehicle model name
     private int directionAngle; // the the angle that the vehicle is facing towards.
-    private BufferedImage image; // an image of a Vehicle.Vehicle in a Canvas
-    private ArrayList<Observer> observers = new ArrayList<>();
+
 
     public Vehicle(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                    Color color, String modelName, int directionAngle) {
@@ -45,35 +41,6 @@ public abstract class Vehicle implements Movable {
         this.color = color;
         this.modelName = modelName;
         this.directionAngle = directionAngle;
-    }
-
-    public Vehicle(double x, double y, int nrDoors, double enginePower, double currentSpeed,
-                   Color color, String modelName, int directionAngle, BufferedImage image) {
-        this.x = x;
-        this.y = y;
-        this.nrDoors = nrDoors;
-        this.enginePower = enginePower;
-        this.currentSpeed = currentSpeed;
-        this.color = color;
-        this.modelName = modelName;
-        this.directionAngle = directionAngle;
-        this.image = image;
-    }
-
-
-    public void notifyListeners() {
-        for(Observer o:observers) {
-            o.updateView();
-        }
-    }
-
-    public void addListener(Observer o) {
-        observers.add(o);
-
-    }
-
-    public void removeListener(Observer o) {
-        observers.remove(o);
     }
 
     /**
@@ -224,14 +191,6 @@ public abstract class Vehicle implements Movable {
         this.directionAngle = directionAngle;
     }
 
-    /**
-     * Gets the image for the vehicle
-     *
-     * @return an image of a Vehicle.Vehicle in a Canvas
-     */
-    public BufferedImage getImage() {
-        return image;
-    }
 
     /**
      * Start the engine
@@ -255,7 +214,6 @@ public abstract class Vehicle implements Movable {
         double angleInRadian = (getDirectionAngle() * (Math.PI / 180));
         setX(getX() + sin(angleInRadian) * getCurrentSpeed());
         setY(getY() - cos(angleInRadian) * getCurrentSpeed());
-        notifyListeners();
     }
 
     /**

@@ -34,11 +34,13 @@ initComponents(title);
         vehicles.add(vehicle);
     }
 
-    public void updateView(){
-        textLabel.setText(createString());
+    public void updateView(Vehicle vehicle){
+        textLabel.setText(createString(vehicle));
     }
 
-    public String createString(){
+    public String createString(Vehicle vehicle){
+        String s = "<" + vehicle.getModelName() + "> : <" + vehicle.getCurrentSpeed() + ">" + "\n";
+        /*
         StringBuilder sb = new StringBuilder();
         for(Vehicle v:vehicles) {
             sb.append("Name: ");
@@ -47,6 +49,7 @@ initComponents(title);
             sb.append(v.getCurrentSpeed());
             sb.append(System.getProperty("line.separator"));
         }
-        return sb.toString();
+        */
+        return s;
     }
 }

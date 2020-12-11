@@ -2,14 +2,25 @@ import Controller.EngineController;
 import Controller.GasController;
 import Vehicle.*;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 public class Application {
 
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        Volvo240 volvo = new Volvo240(0, 0, "volvo1");
-        Volvo240 volvo2 = new Volvo240(0,100,"volvo2");
-        //   Vehicle volvo1 = VehicleFactory.createVolvo(0,0,"Volvo1",volvoImage);
+        Application app = new Application();
+
+        Volvo240 volvo240 = new Volvo240(0, 0, 4, 100, 0, Color.red, "Vehicle.Volvo240", 90);
+        Saab95 saab95 = new Saab95(0,100,10,100,0,Color.black, "Vehicle.Saab95",90);
+        Scania scania = new Scania(0,200,2,300,0,Color.blue,"Vehicle.Scania", 90);
+
+        app.vehicles.add(volvo240);
+        app.vehicles.add(saab95);
+        app.vehicles.add(scania);
+
         GasController gc = new GasController("test");
         EngineController ec = new EngineController("engine");
         //TurboController tc = new TurboController("turbooo");
@@ -36,8 +47,10 @@ public class Application {
         gc.addVehicle(volvo2);
 
         ec.addVehicle(volvo);
+        ec.addVehicle(volvo2);
         clock.addVehicle(volvo);
         clock.addVehicle(volvo2);
+
         clock.start();
 
 
