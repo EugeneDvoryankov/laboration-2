@@ -12,8 +12,8 @@ public class Application {
         Volvo240 volvo = new Volvo240(0, 0, "volvo1");
         Volvo240 volvo2 = new Volvo240(0, 100, "volvo2");
         //   Vehicle volvo1 = VehicleFactory.createVolvo(0,0,"Volvo1",volvoImage);
-        GasController gc = new GasController("test");
-        EngineController ec = new EngineController("engine");
+
+        //EngineController ec = new EngineController("engine");
         //TurboController tc = new TurboController("turbooo");
         //PlatformController pc = new PlatformController("platform");
 
@@ -26,13 +26,12 @@ public class Application {
         World world = new World();
         Clock clock = new Clock(world);
 
+        GasController gc = new GasController("test", world);
+
         world.addVehicle(volvo);
         world.addVehicle(volvo2);
 
         world.addListener(drawPanel);
-
-        //gc.addVehicle(volvo);
-        //gc.addVehicle(volvo2);
 
         clock.start();
 

@@ -23,7 +23,14 @@ public class World {
     //}
     public void gas(int amount) {
         for(Vehicle v:vehicles) {
+            gasModel.gas(amount, v);
+        }
 
+    }
+
+    public void brake(int amount) {
+        for(Vehicle v:vehicles) {
+            gasModel.brake(amount, v);
         }
 
     }

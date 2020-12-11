@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.World;
 import Vehicle.Vehicle;
 
 import javax.swing.*;
@@ -21,9 +22,11 @@ public class GasController {
 
     JButton gasButton = new JButton("Gas");
     JButton brakeButton = new JButton("Brake");
+    World world;
 
 
-    public GasController(String title) {
+    public GasController(String title, World world) {
+        this.world = world;
         initComponents(title);
     }
 
@@ -73,6 +76,15 @@ public class GasController {
     }
 
     void gas(int amount) {
+        world.gas(amount);
+    }
+
+    void brake(int amount) {
+        world.brake(amount);
+    }
+
+    /*
+    void gas(int amount) {
         double gas = (double) amount/100;
         for (Vehicle v : vehicles) {
             v.gas(gas);
@@ -88,7 +100,9 @@ public class GasController {
 
     public void addVehicle(Vehicle vehicle) {
         vehicles.add(vehicle);
+
+
     }
 
-
+     */
 }

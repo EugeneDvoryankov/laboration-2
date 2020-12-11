@@ -21,6 +21,8 @@ public class Volvo240 extends Car {
     public Volvo240(double x, double y,String modelName) {
         super(x,y,4,100,0,Color.cyan, modelName, 90);
         stopEngine();
+
+        /*
         try {
 
             volvoImage = ImageIO.read(this.getClass().getResourceAsStream("pics/Volvo240.jpg"));
@@ -28,11 +30,13 @@ public class Volvo240 extends Car {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+         */
     }
 
     public Volvo240(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                     Color color, String modelName, int directionAngle, BufferedImage image){
-        super(x,y, nrDoors, enginePower, currentSpeed, color, modelName,directionAngle, image);
+        super(x,y, nrDoors, enginePower, currentSpeed, color, modelName,directionAngle);
         stopEngine();
     }
 
