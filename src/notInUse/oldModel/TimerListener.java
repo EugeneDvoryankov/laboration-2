@@ -1,18 +1,19 @@
-package Model;
-
-import Model.*;
+package notInUse.oldModel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TimerListener implements ActionListener {
+
+
     public void actionPerformed(ActionEvent e) {
+        /*
         for (Vehicle vehicle : vehicles) {
-                /*
-                Assuming each image has x(width) = 100, and y(height) = 60.
-                The green frame they're in has the dimensions x = 784 X 560 = y.
-                I'm really not sure about these numbers, gotten from trial and error.
-                 */
+
+                //Assuming each image has x(width) = 100, and y(height) = 60.
+                //The green frame they're in has the dimensions x = 784 X 560 = y.
+                //I'm really not sure about these numbers, gotten from trial and error.
+
 
             vehicle.move();
             // int x = (int) Math.round(vehicle.getX());
@@ -66,5 +67,8 @@ public class TimerListener implements ActionListener {
 
     private boolean isOutOfBoundsDown(Vehicle car) {
         return car.getY() > 500;
+    }
+*/
+
     }
 }

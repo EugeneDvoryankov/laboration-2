@@ -1,7 +1,10 @@
 package Vehicle;
 
+import Observer.Observer;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 import static java.lang.Math.*;
 
@@ -30,6 +33,7 @@ public abstract class Vehicle implements Movable {
     private String modelName; // The vehicle model name
     private int directionAngle; // the the angle that the vehicle is facing towards.
     private BufferedImage image; // an image of a Vehicle.Vehicle in a Canvas
+    private ArrayList<Observer> observers = new ArrayList<>();
 
     public Vehicle(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                    Color color, String modelName, int directionAngle) {
@@ -57,6 +61,20 @@ public abstract class Vehicle implements Movable {
     }
 
 
+    public void notifyListeners() {
+        for(Observer o:observers) {
+            o.updateView();
+        }
+    }
+
+    public void addListener(Observer o) {
+        observers.add(o);
+
+    }
+
+    public void removeListener(Observer o) {
+        observers.remove(o);
+    }
 
     /**
      * Get the X coordinate (For testing purposes)
@@ -206,7 +224,8 @@ public abstract class Vehicle implements Movable {
         this.directionAngle = directionAngle;
     }
 
-    /** Gets the image for the vehicle
+    /**
+     * Gets the image for the vehicle
      *
      * @return an image of a Vehicle.Vehicle in a Canvas
      */
@@ -236,7 +255,7 @@ public abstract class Vehicle implements Movable {
         double angleInRadian = (getDirectionAngle() * (Math.PI / 180));
         setX(getX() + sin(angleInRadian) * getCurrentSpeed());
         setY(getY() - cos(angleInRadian) * getCurrentSpeed());
-
+        notifyListeners();
     }
 
     /**
@@ -265,6 +284,7 @@ public abstract class Vehicle implements Movable {
     public void invertDirection() {
         setDirectionAngle(directionAngle + 180);
     }
+
     /**
      * toString method for testing purposes.
      *
@@ -300,7 +320,6 @@ public abstract class Vehicle implements Movable {
         double newSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount, 0);
         setCurrentSpeed(newSpeed);
     }
-
 
 
     /**

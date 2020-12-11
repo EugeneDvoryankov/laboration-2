@@ -1,4 +1,4 @@
-package Model;
+package notInUse.oldModel;
 import Vehicle.*;
 
 public interface IWorld {

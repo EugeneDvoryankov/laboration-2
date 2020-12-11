@@ -1,4 +1,4 @@
-package Model;
+package notInUse.oldModel;
 
 public class Model {
     private DrawPanel drawPanel;

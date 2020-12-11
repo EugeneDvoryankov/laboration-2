@@ -1,6 +1,5 @@
-package Model;
+package notInUse.oldModel;
 import Vehicle.*;
-import Model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +55,7 @@ public class World implements IWorld{
 
             // repaint() calls the paintComponent method of the panel
             //world.update();
-            frame.drawPanel.repaint();
+            //frame.drawPanel.repaint();
         }
     }
 

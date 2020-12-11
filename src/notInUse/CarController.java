@@ -42,7 +42,7 @@ public class CarController {
         Saab95 saab95 = new Saab95(0,100,10,100,0,Color.black, "Vehicle.Saab95",90);
         Scania scania = new Scania(0,200,2,300,0,Color.blue,"Vehicle.Scania", 90);
 
-        cc.vehicles.add(new Volvo240(0, 0, 4, 100, 0, Color.red, "Vehicle.Volvo240", 90));
+        //cc.vehicles.add(new Volvo240(0, 0, 4, 100, 0, Color.red, "Vehicle.Volvo240", 90));
         cc.vehicles.add(saab95);
         cc.vehicles.add(scania);
 
