@@ -653,7 +653,7 @@
             <mxPoint x="4090" y="1010" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KnkGTSsJ77P0Gd9VbXLC-72" value="Clock" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+        <mxCell id="KnkGTSsJ77P0Gd9VbXLC-72" value="Model.Clock" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="4210" y="859.74" width="140" height="262" as="geometry" />
         </mxCell>
         <mxCell id="KnkGTSsJ77P0Gd9VbXLC-73" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;&amp;lt;&amp;lt;final&amp;gt;&amp;gt; - delay : int&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="KnkGTSsJ77P0Gd9VbXLC-72" vertex="1">

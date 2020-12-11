@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.World;
 import Vehicle.HasTurbo;
 
 import javax.swing.*;
@@ -13,10 +14,12 @@ public class TurboController {
     JPanel turboPanel = new JPanel();
     JButton turboOnButton = new JButton("Turbo on");
     JButton turboOffButton = new JButton("Turbo off");
+    World world;
 
 
-    public TurboController(String title){
-initComponents(title);
+    public TurboController(String title, World world){
+        this.world = world;
+        initComponents(title);
     }
 
     private void initComponents(String title){
@@ -43,6 +46,16 @@ initComponents(title);
         });
 
     }
+
+    private void turboOn() {
+    world.turboOn();
+    }
+
+    private void turboOff() {
+    world.turboOff();
+    }
+
+    /*
     private void turboOn() {
         for(HasTurbo h: hasTurbos) {
             h.setTurboOn();
@@ -55,7 +68,10 @@ initComponents(title);
         }
     }
 
+
     public void addVehicleWithTurbo(HasTurbo h){
         hasTurbos.add(h);
     }
+
+     */
 }

@@ -1,6 +1,8 @@
+package Model;
+
 import Observer.Observer;
 import Vehicle.Vehicle;
-
+import Vehicle.HasTurbo;
 import java.util.ArrayList;
 
 public class World {
@@ -8,23 +10,47 @@ public class World {
     private ArrayList<Vehicle> vehicles= new ArrayList<>();
     //private CollectionVehicles vehicles;
     private ArrayList<Observer> listeners = new ArrayList<>();
+    private HasTurboModel hasTurboModel = new HasTurboModel();
+    private GasModel gasModel = new GasModel();
 
     public World(){
 
-
     }
 
-    //public World(CollectionVehicles vehicles){
+    //public Model.World(CollectionVehicles vehicles){
      //   this.vehicles = vehicles;
 
     //}
+    public void gas(int amount) {
+        for(Vehicle v:vehicles) {
+
+        }
+
+    }
+
+    public void turboOn(){
+        for(Vehicle v:vehicles) {
+            if(v instanceof HasTurbo){
+                hasTurboModel.turboOn((HasTurbo) v);
+            }
+        }
+    }
+
+    public void turboOff(){
+        for(Vehicle v:vehicles) {
+            if(v instanceof HasTurbo){
+                hasTurboModel.turboOff((HasTurbo) v);
+            }
+        }
+    }
+
+
 
     private void startAllVehicles() {
         for(Vehicle v:vehicles) {
             v.startEngine();
         }
     }
-
 
     public void notifyView(){
         for(Observer o: listeners) {
