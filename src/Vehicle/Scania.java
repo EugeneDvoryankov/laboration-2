@@ -21,6 +21,14 @@ public class Scania extends Truck implements HasPlatform {
     private int platformAngle; // the angle the platform is at, the platform is considered a ramp
     private BufferedImage scan;
 
+    public Scania(double x, double y, String modelName){
+        super(x,y,2,350,0,Color.black, modelName,90);
+        setPlatformAngle(0);
+        ramp.lowerRamp();
+        stopEngine();
+    }
+
+
     public Scania(double x, double y, int nrDoors, double enginePower, double currentSpeed,
                   Color color, String modelName, int directionAngle){
         super(x,y, nrDoors, enginePower, currentSpeed, color, modelName,directionAngle);

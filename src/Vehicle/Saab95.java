@@ -22,6 +22,8 @@ private BufferedImage saabImage;
     public Saab95(double x, double y, String modelName) {
         super(x,y,4,100,0,Color.cyan, modelName, 90);
         stopEngine();
+
+        /*
         try {
 
             saabImage = ImageIO.read(this.getClass().getResourceAsStream("pics/Saab95.jpg"));
@@ -29,6 +31,8 @@ private BufferedImage saabImage;
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+         */
     }
 
     public Saab95(double x, double y,int nrDoors, double enginePower, double currentSpeed,

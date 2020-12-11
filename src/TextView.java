@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class TextView extends JFrame  {
+public class TextView extends JFrame implements Observer {
 ArrayList<Vehicle> vehicles = new ArrayList<>();
     JPanel textPanel = new JPanel();
     TextLabel textLabel = new TextLabel();
@@ -26,6 +26,7 @@ initComponents(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    /*
     public void addTextLabel(JLabel label){
         textPanel.add(label);
     }
@@ -38,18 +39,23 @@ initComponents(title);
         textLabel.setText(createString(vehicle));
     }
 
-    public String createString(Vehicle vehicle){
-        String s = "<" + vehicle.getModelName() + "> : <" + vehicle.getCurrentSpeed() + ">" + "\n";
-        /*
+     */
+
+    public void updateView(ArrayList<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+        textLabel.setText(createString());
+    }
+
+    public String createString(){
+
         StringBuilder sb = new StringBuilder();
         for(Vehicle v:vehicles) {
             sb.append("Name: ");
             sb.append(v.getModelName());
             sb.append(" Speed: ");
             sb.append(v.getCurrentSpeed());
-            sb.append(System.getProperty("line.separator"));
+            sb.append(" ");
         }
-        */
-        return s;
+        return sb.toString();
     }
 }

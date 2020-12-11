@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class TextLabel extends JLabel  {
 
     public TextLabel(){
-        this.setFont(new Font("Verdana", Font.PLAIN, 40));
+        this.setFont(new Font("Verdana", Font.PLAIN, 20));
         this.setForeground(Color.WHITE);
     }
     public void updateView(Vehicle vehicle) {
